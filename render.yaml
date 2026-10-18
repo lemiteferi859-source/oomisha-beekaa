@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: oomisha-beekaa-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        value: mongodb+srv://lemiteferi859_db_user:iesewDSaUSvZCsos@cluster0.l1v0xb4.mongodb.net/oomisha_beekaa?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET
+        value: oomisha_beekaa_secret_key_jwt_2026
