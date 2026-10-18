@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-container": "#705400", "inverse-primary": "#8bd79b", "tertiary": "#533e00", "primary-container": "#166534", "secondary": "#006e2f", "surface-dim": "#d0dbed", "on-secondary-container": "#007432", "outline": "#707a6f", "surface-container-low": "#eff4ff", "on-error-container": "#93000a", "on-background": "#121c2a", "error-container": "#ffdad6", "background": "#f8f9ff", "on-secondary-fixed": "#002109", "secondary-fixed": "#6bff8f", "on-primary-fixed": "#00210b", "outline-variant": "#bfc9bd", "primary-fixed-dim": "#8bd79b", "on-primary-fixed-variant": "#005226", "on-surface": "#121c2a", "error": "#ba1a1a", "surface-container-high": "#dee9fc", "on-secondary": "#ffffff", "surface-container": "#e6eeff", "surface-container-lowest": "#ffffff", "primary-fixed": "#a6f4b5", "tertiary-fixed-dim": "#f7be1d", "on-secondary-fixed-variant": "#005321", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "on-error": "#ffffff", "secondary-fixed-dim": "#4ae176", "secondary-container": "#6bff8f", "on-tertiary-fixed-variant": "#5a4300", "on-primary-container": "#93e0a2", "on-tertiary-fixed": "#251a00", "surface-bright": "#f8f9ff", "primary": "#004c22", "on-tertiary-container": "#ffc731", "surface-tint": "#1f6c3a", "surface-container-highest": "#d9e3f6", "tertiary-fixed": "#ffdf9a", "on-surface-variant": "#404940", "surface": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "inverse-surface": "#27313f", "surface-variant": "#d9e3f6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "gutter": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin": "2rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-md": "1rem" }, fontFamily: { "body-sm": ["Inter"], "headline-md": ["Inter"], "numeric-data-md": ["Inter"], "numeric-data-lg": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "headline-xl-mobile": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "label-lg": ["Inter"], "headline-sm": ["Inter"], "headline-lg-mobile": ["Inter"] }, fontSize: { "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "numeric-data-md": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "numeric-data-lg": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Open Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary rounded-lg transition-colors"><span class="material-symbols-outlined">menu</span></button><img alt="AgriVision Ethiopia Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VjWr67XKqiy6YJs5uQuTydU0ElR1M7zVS9nSQNEuchjQWlGYhJNGaTOXuLeWuOELzEPVVgvoCNF7k1VSsR246aGKrbJkQrG9JamN0M7oekA8gqO2CJQfvlm7_JhBToPWVN7mvWUQ2hM6Whw78GuIz16f0e_9NMVzaM3K6CuJxANvV12qvPZmKs7AsaM2qD_HHm_OVqxUgk_6LkiQ8EaZozVlDq91uIMtgKM5xaQ4_07WcUy1fmnkyNQc34"/><div class="flex flex-col truncate pl-space-xs"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">AgriVision ET</span><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">My Farm</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><select aria-label="Language Selection" class="bg-surface-container-low text-on-surface text-label-sm font-label-sm rounded-full py-1 px-2 focus:outline-none"><option value="en">EN</option><option value="am">አማ</option><option value="om">OR</option></select><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-JZ2y2rsBE6Z5l9vNa9s6UzVl0bu9sac_hGxRqAc82nFzeKp7bUwdczaOV9LLvyhqvo3rQsH8c7lGLDzRnDh4fAC009epCuYyIXYIQnd0dOqTaCpIiODpLQ00q1MaDF9VoLntJfVWonP_T-Nzf9Z-Ymy4QvUcAqGKlySDn_qK4-QEf_N3TcusRS8h_4i-sz9d3vec6o0y1RH7yhnvhnzFI3SBvYn-9zYbLGJEG_AkL94-nc2OvNBx5w"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Greeting & Administrative Farm Identifier -->
+<section class="px-margin-mobile py-space-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Ada'a Woreda, Oromia</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface truncate">Ato Tadesse's Farm</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+          Meher Season 2025 Farm Operations
+        </p>
+</div>
+<button class="flex-shrink-0 bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-3.5 py-2.5 rounded-lg shadow-sm flex items-center gap-1.5 active:scale-95 transition-all" id="add-plot-btn">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Add Plot</span>
+</button>
+</div>
+<!-- Quick Status Pill Banner -->
+<div class="bg-surface-container-low rounded-xl p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-base">eco</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Agri-Advisory Alert</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Ideal weather window for top-dressing fertilizer</span>
+</div>
+</div>
+<span class="bg-secondary/10 text-secondary text-label-sm font-label-sm px-2 py-1 rounded-full whitespace-nowrap">Optimal</span>
+</div>
+</section>
+<!-- Summary Metric Cards (2x2 Compact Grid) -->
+<section class="px-margin-mobile py-space-xs">
+<div class="grid grid-cols-2 gap-gutter-mobile">
+<!-- Total Farm Area -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Farm Area</span>
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">crop_free</span>
+</div>
+</div>
+<div class="mt-2">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">4.5 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Ha</span></div>
+<span class="font-label-sm text-label-sm text-secondary">3 active plots</span>
+</div>
+</div>
+<!-- Active Crops -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Crops</span>
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">grass</span>
+</div>
+</div>
+<div class="mt-2">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">3 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Types</span></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Teff, Wheat, Beans</span>
+</div>
+</div>
+<!-- Upcoming Tasks -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Field Tasks</span>
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+</div>
+</div>
+<div class="mt-2">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">4 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Pending</span></div>
+<span class="font-label-sm text-label-sm text-error">1 urgent priority</span>
+</div>
+</div>
+<!-- Harvest Forecast -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Est. Harvest</span>
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</div>
+</div>
+<div class="mt-2">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">94 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Qt</span></div>
+<span class="font-label-sm text-label-sm text-secondary">+12% vs 2024</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Meher Seasonal Timeline Strip -->
+<section class="px-margin-mobile pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Meher Seasonal Stage</h2>
+</div>
+<span class="bg-surface-container text-on-surface text-label-sm font-label-sm px-2.5 py-1 rounded-full">Week 9 of 18</span>
+</div>
+<!-- Progress Track -->
+<div class="relative pt-2 pb-1">
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden flex">
+<div class="bg-secondary-fixed-dim h-full w-[25%]"></div>
+<div class="bg-primary h-full w-[35%]"></div>
+<div class="bg-surface-dim h-full w-[40%]"></div>
+</div>
+<!-- Pin Marker for Current Week -->
+<div class="absolute top-0 left-[55%] -translate-x-1/2 flex flex-col items-center">
+<span class="w-3 h-3 bg-primary rounded-full shadow-md"></span>
+</div>
+</div>
+<div class="grid grid-cols-3 text-center pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sowing (Sene)</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Completed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Vegetative (Hamle)</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Current Phase</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Harvest (Tikimt)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 2025</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Active Plot-by-Plot Crop Management Cards -->
+<section class="px-margin-mobile pt-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">potted_plant</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Active Crop Plots</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Managed</span>
+</div>
+<!-- Plot A: Magna White Teff -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">spa</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold">Plot A</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2.0 Hectares</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Magna White Teff</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Planted: July 12 • Tillering</span>
+</div>
+</div>
+<span class="bg-surface-container-lowest text-secondary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          96% Healthy
+        </span>
+</div>
+<!-- Growth Progress Bar -->
+<div class="flex flex-col gap-1.5 bg-surface-container-low rounded-lg p-2.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Maturity Lifecycle</span>
+<span class="text-primary font-bold">60%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 60%"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm pt-0.5">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">flag</span>
+            Next: Flowering Phase
+          </span>
+<span class="text-on-surface font-medium">In 18 days</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline" data-path="crop-scanner" href="#">
+<span class="material-symbols-outlined text-[16px]">document_scanner</span>
+<span>Run AI Scanner</span>
+</a>
+<button class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-0.5">
+<span>Log Treatment</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Plot B: Bread Wheat (Kakaba) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">grain</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold">Plot B</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.5 Hectares</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Bread Wheat (Kakaba)</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Planted: July 20 • Vegetative</span>
+</div>
+</div>
+<span class="bg-surface-container-lowest text-tertiary-container px-2.5 py-1 rounded-full font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+          88% Health
+        </span>
+</div>
+<!-- Growth Progress Bar -->
+<div class="flex flex-col gap-1.5 bg-surface-container-low rounded-lg p-2.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Maturity Lifecycle</span>
+<span class="text-secondary font-bold">45%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 45%"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm pt-0.5">
+<span class="text-tertiary flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-[15px]">warning</span>
+            Monitor Rust & Top-dress
+          </span>
+<span class="text-on-surface font-medium">Due Thursday</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline" data-path="crop-scanner" href="#">
+<span class="material-symbols-outlined text-[16px]">document_scanner</span>
+<span>Leaf Diagnostics</span>
+</a>
+<button class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-0.5">
+<span>Fertilizer Guide</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Plot C: Haricot Bean (Intercropped) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">yard</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold">Plot C</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.0 Hectare</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Haricot Bean</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Planted: August 02 • Seedling</span>
+</div>
+</div>
+<span class="bg-surface-container-lowest text-secondary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          98% Healthy
+        </span>
+</div>
+<!-- Growth Progress Bar -->
+<div class="flex flex-col gap-1.5 bg-surface-container-low rounded-lg p-2.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Maturity Lifecycle</span>
+<span class="text-primary font-bold">25%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 25%"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm pt-0.5">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">nature</span>
+            Intercropped Soil Replenishment
+          </span>
+<span class="text-secondary font-medium">Nitrogen Fixation</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline" data-path="ai-assistant" href="#">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+<span>Ask AI Agronomist</span>
+</a>
+<button class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-0.5">
+<span>Plot Details</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Farm Task Checklist -->
+<section class="px-margin-mobile pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_turned_in</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Field Operations Tasklist</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="tasks-counter">1/4 Done</span>
+</div>
+<div class="flex flex-col gap-2 pt-1" id="farm-checklist">
+<!-- Task 1 (Completed) -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low transition-colors cursor-pointer select-none">
+<input checked="" class="task-checkbox mt-0.5 w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface line-through text-on-surface-variant">Clear drainage furrows in Plot A</span>
+<span class="font-label-sm text-label-sm text-secondary">Completed yesterday • Good water flow</span>
+</div>
+</label>
+<!-- Task 2 (Pending - High Priority) -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="task-checkbox mt-0.5 w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface">Apply Urea top-dressing on Plot B</span>
+<span class="font-label-sm text-label-sm text-tertiary">Due Thursday • Optimal low-wind window</span>
+</div>
+</label>
+<!-- Task 3 -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="task-checkbox mt-0.5 w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface">Scout Plot A for Grasshopper & Armyworm</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Due Friday • Early morning sweep</span>
+</div>
+</label>
+<!-- Task 4 -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="task-checkbox mt-0.5 w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface">Calibrate Kebele soil moisture probe</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Due Sunday • Sensor synchronization</span>
+</div>
+</label>
+</div>
+<button class="w-full py-2.5 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-1.5 transition-colors" id="add-task-btn">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add Farm Task</span>
+</button>
+</div>
+</section>
+<!-- Yield Performance Chart (Historical Comparison) -->
+<section class="px-margin-mobile pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">bar_chart</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Yield Performance (Qt)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">+18% 3-Yr Trend</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Annual cumulative quintals harvested across Ada'a farm plots.</p>
+<!-- Clean Inline SVG Bar Chart -->
+<div class="w-full pt-3 pb-1">
+<svg aria-label="Yield comparison chart" class="w-full h-32 overflow-visible" viewbox="0 0 320 130">
+<!-- Horizontal Grid Lines -->
+<line stroke="#E2E8F0" stroke-dasharray="3,3" stroke-width="1" x1="30" x2="310" y1="20" y2="20"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3,3" stroke-width="1" x1="30" x2="310" y1="55" y2="55"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3,3" stroke-width="1" x1="30" x2="310" y1="90" y2="90"></line>
+<line stroke="#CBD5E1" stroke-width="1.5" x1="30" x2="310" y1="105" y2="105"></line>
+<!-- Axis Values -->
+<text fill="#707a6f" font-family="Inter" font-size="9" x="5" y="24">100</text>
+<text fill="#707a6f" font-family="Inter" font-size="9" x="12" y="59">60</text>
+<text fill="#707a6f" font-family="Inter" font-size="9" x="12" y="94">20</text>
+<!-- 2023 Bar -->
+<rect class="opacity-80" fill="#8bd79b" height="61" rx="4" width="36" x="58" y="44"></rect>
+<text fill="#004c22" font-family="Inter" font-size="10" font-weight="700" text-anchor="middle" x="76" y="38">72</text>
+<text fill="#404940" font-family="Inter" font-size="10" text-anchor="middle" x="76" y="120">2023</text>
+<!-- 2024 Bar -->
+<rect fill="#4ae176" height="73" rx="4" width="36" x="142" y="32"></rect>
+<text fill="#004c22" font-family="Inter" font-size="10" font-weight="700" text-anchor="middle" x="160" y="26">84</text>
+<text fill="#404940" font-family="Inter" font-size="10" text-anchor="middle" x="160" y="120">2024</text>
+<!-- 2025 Projected Bar (Striped/High Contrast Accent) -->
+<rect fill="#166534" height="83" rx="4" width="36" x="226" y="22"></rect>
+<text fill="#166534" font-family="Inter" font-size="11" font-weight="700" text-anchor="middle" x="244" y="16">94*</text>
+<text fill="#166534" font-family="Inter" font-size="10" font-weight="700" text-anchor="middle" x="244" y="120">2025 (Est)</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant bg-surface-container-low p-2 rounded-lg">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-primary"></span>
+          2025 Projected Target: 94 Quintals
+        </span>
+<span class="text-secondary font-semibold">On Track</span>
+</div>
+</div>
+</section>
+<!-- Recent Field Activity Feed -->
+<section class="px-margin-mobile pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">history</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recent Field Activity</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline">View All</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Activity Item 1 -->
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-secondary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[17px]">document_scanner</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface">Scanned Plot A Teff leaf</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Diagnosed 96% Healthy • Zero rust detected</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">2 days ago • Field AI Scanner</span>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[17px]">science</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface">Soil tested via Kebele DA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">pH 6.8 Optimal • Moderate Nitrogen reserve</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">5 days ago • Extension Officer Visit</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Farm Photo Gallery / Field Ground Truth -->
+<section class="px-margin-mobile pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">photo_camera</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Plot Field Snapshots</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Meher Season</span>
+</div>
+<div class="grid grid-cols-2 gap-gutter-mobile">
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container shadow-sm group">
+<img class="w-full h-full object-cover" data-alt="Vibrant close-up of emerald green young Teff crops growing neatly in the fertile black vertisol soils of Adaa woreda Ethiopia under bright natural morning sunlight, fine agricultural detail with dew drops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP_ryCfCRxlPmlrEKENCf-ooSWPxyIJZzMrVPeLIzQcSU3I-htst2n1KMwcVpiAvCwT9x3lpZq-mHvzd0lZ39vxZRS7r4ctYMBA6_6M4MlpVJ5k36Bo_IfF1YXK20LVGfUoDIZM-WV0evHT-ZB-ycbPUiLF7_lJkFBR6Ig773kdzknKzFvkoQ71dgox2NsGxsDTQ6hsewaVJGxZxlcPcrE2H3Sdv6jEhJwoYgJXiYhVxhFR-DFTk4uKg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-2">
+<span class="text-white font-label-sm text-label-sm font-semibold truncate">Plot A: Teff Vigour</span>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container shadow-sm group">
+<img class="w-full h-full object-cover" data-alt="Lush green wheat crops in vegetative elongation stage under Ethiopian highland skies, clear rows in well-maintained farm fields with distant acacia trees, sunny rural Ethiopian farm landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTqUKV4VtJDBksmo6VJ6xSAhOeHh7kms4V-rVNcq1RhwlHX-7wgzL5JTdpWnzyx9_8kGHo_stDDy8lI8KO4VNVwYJHowYlHMuiNNYYQunUO34ENcjtb_TCWnyQZD6DBFO9XfgeN4AszALz4MaQNpp6j7S2OTrDNjz6wkUPFyyaA3u-0Tztvsh-mkhtolBObYzzFTv8qCU7sJcFRo-pDwGW6Syr3wAXvRn-zj4sKkYp4xN_x5IxRoA-Rw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-2">
+<span class="text-white font-label-sm text-label-sm font-semibold truncate">Plot B: Wheat Field</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Simulation Disclaimer Footer -->
+<section class="px-margin-mobile pt-space-md pb-space-lg text-center">
+<div class="p-3 bg-surface-container-low rounded-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] align-middle text-primary mr-1">info</span>
+        All crop metrics, maturity stages, and harvest yield projections are simulated management estimates.
+      </p>
+</div>
+</section>
+</div>
+<!-- Inline micro-interactions for Tasklist and buttons -->
+<script>
+  (function() {
+    const checkboxes = document.querySelectorAll('.task-checkbox');
+    const counter = document.getElementById('tasks-counter');
+
+    function updateCount() {
+      if (!checkboxes.length || !counter) return;
+      const total = checkboxes.length;
+      let checked = 0;
+      checkboxes.forEach(cb => {
+        const textSpan = cb.parentElement.querySelector('span.text-body-md');
+        if (cb.checked) {
+          checked++;
+          if (textSpan) textSpan.classList.add('line-through', 'text-on-surface-variant');
+        } else {
+          if (textSpan) textSpan.classList.remove('line-through', 'text-on-surface-variant');
+        }
+      });
+      counter.textContent = checked + '/' + total + ' Done';
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', updateCount);
+    });
+
+    const addPlotBtn = document.getElementById('add-plot-btn');
+    if (addPlotBtn) {
+      addPlotBtn.addEventListener('click', () => {
+        alert('Plot creation sheet: Select crop type (Teff, Wheat, Maize, or Legumes) and parcel boundary via GPS coordinate tagging.');
+      });
+    }
+
+    const addTaskBtn = document.getElementById('add-task-btn');
+    if (addTaskBtn) {
+      addTaskBtn.addEventListener('click', () => {
+        const checklist = document.getElementById('farm-checklist');
+        if (!checklist) return;
+        const newLabel = document.createElement('label');
+        newLabel.className = 'flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none';
+        newLabel.innerHTML = `
+          <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer">
+          <div class="flex flex-col min-w-0">
+            <span class="font-body-md text-body-md text-on-surface">Weekly pest visual scouting</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Due in 3 days • Routine Inspection</span>
+          </div>
+        `;
+        checklist.appendChild(newLabel);
+        const newCb = newLabel.querySelector('.task-checkbox');
+        newCb.addEventListener('change', updateCount);
+        updateCount();
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary font-label-md"><div class="flex items-center justify-around h-16 px-space-xs max-w-md mx-auto"><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-[10px] leading-tight">Home</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="crop-scanner" href="#"><span class="material-symbols-outlined text-[22px]">document_scanner</span><span class="font-label-sm text-[10px] leading-tight">Scanner</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="weather" href="#"><span class="material-symbols-outlined text-[22px]">partly_cloudy_day</span><span class="font-label-sm text-[10px] leading-tight">Weather</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="market" href="#"><span class="material-symbols-outlined text-[22px]">payments</span><span class="font-label-sm text-[10px] leading-tight">Market</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[22px]">smart_toy</span><span class="font-label-sm text-[10px] leading-tight">AI Help</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-12 h-12 transition-colors text-primary font-label-md" data-path="my-farm" href="#"><span class="material-symbols-outlined text-[22px]">agriculture</span><span class="font-label-sm text-[10px] leading-tight">My Farm</span></a></div></nav></body></html>

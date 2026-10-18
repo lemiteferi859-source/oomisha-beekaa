@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-container": "#705400", "inverse-primary": "#8bd79b", "tertiary": "#533e00", "primary-container": "#166534", "secondary": "#006e2f", "surface-dim": "#d0dbed", "on-secondary-container": "#007432", "outline": "#707a6f", "surface-container-low": "#eff4ff", "on-error-container": "#93000a", "on-background": "#121c2a", "error-container": "#ffdad6", "background": "#f8f9ff", "on-secondary-fixed": "#002109", "secondary-fixed": "#6bff8f", "on-primary-fixed": "#00210b", "outline-variant": "#bfc9bd", "primary-fixed-dim": "#8bd79b", "on-primary-fixed-variant": "#005226", "on-surface": "#121c2a", "error": "#ba1a1a", "surface-container-high": "#dee9fc", "on-secondary": "#ffffff", "surface-container": "#e6eeff", "surface-container-lowest": "#ffffff", "primary-fixed": "#a6f4b5", "tertiary-fixed-dim": "#f7be1d", "on-secondary-fixed-variant": "#005321", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "on-error": "#ffffff", "secondary-fixed-dim": "#4ae176", "secondary-container": "#6bff8f", "on-tertiary-fixed-variant": "#5a4300", "on-primary-container": "#93e0a2", "on-tertiary-fixed": "#251a00", "surface-bright": "#f8f9ff", "primary": "#004c22", "on-tertiary-container": "#ffc731", "surface-tint": "#1f6c3a", "surface-container-highest": "#d9e3f6", "tertiary-fixed": "#ffdf9a", "on-surface-variant": "#404940", "surface": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "inverse-surface": "#27313f", "surface-variant": "#d9e3f6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "gutter": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin": "2rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-md": "1rem" }, fontFamily: { "body-sm": ["Inter"], "headline-md": ["Inter"], "numeric-data-md": ["Inter"], "numeric-data-lg": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "headline-xl-mobile": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "label-lg": ["Inter"], "headline-sm": ["Inter"], "headline-lg-mobile": ["Inter"] }, fontSize: { "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "numeric-data-md": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "numeric-data-lg": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Open Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary rounded-lg transition-colors"><span class="material-symbols-outlined">menu</span></button><img alt="AgriVision Ethiopia Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VjWr67XKqiy6YJs5uQuTydU0ElR1M7zVS9nSQNEuchjQWlGYhJNGaTOXuLeWuOELzEPVVgvoCNF7k1VSsR246aGKrbJkQrG9JamN0M7oekA8gqO2CJQfvlm7_JhBToPWVN7mvWUQ2hM6Whw78GuIz16f0e_9NMVzaM3K6CuJxANvV12qvPZmKs7AsaM2qD_HHm_OVqxUgk_6LkiQ8EaZozVlDq91uIMtgKM5xaQ4_07WcUy1fmnkyNQc34"/><div class="flex flex-col truncate pl-space-xs"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">AgriVision ET</span><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Market</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><select aria-label="Language Selection" class="bg-surface-container-low text-on-surface text-label-sm font-label-sm rounded-full py-1 px-2 focus:outline-none"><option value="en">EN</option><option value="am">አማ</option><option value="om">OR</option></select><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-JZ2y2rsBE6Z5l9vNa9s6UzVl0bu9sac_hGxRqAc82nFzeKp7bUwdczaOV9LLvyhqvo3rQsH8c7lGLDzRnDh4fAC009epCuYyIXYIQnd0dOqTaCpIiODpLQ00q1MaDF9VoLntJfVWonP_T-Nzf9Z-Ymy4QvUcAqGKlySDn_qK4-QEf_N3TcusRS8h_4i-sz9d3vec6o0y1RH7yhnvhnzFI3SBvYn-9zYbLGJEG_AkL94-nc2OvNBx5w"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Utility Context & Subtitle -->
+<div class="px-margin-mobile pt-space-sm pb-space-xs">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block mr-1.5 animate-pulse"></span>
+        ECX LIVE BENCHMARK
+      </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Updated 14 mins ago</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
+      Ethiopian Agricultural Market
+    </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+      Live commodity price benchmarks across Ethiopian grain and cash crop trading hubs.
+    </p>
+<!-- Hackathon Disclaimer Pill -->
+<div class="mt-2.5 flex items-center gap-2 p-2 rounded-lg bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-base flex-shrink-0">info</span>
+<p class="font-label-sm text-label-sm leading-tight">
+<span class="font-bold text-on-surface">Demo Notice:</span> Simulated ECX & Regional Market Feed • Demo Hackathon Data
+      </p>
+</div>
+</div>
+<!-- Search and Dynamic Filter Chips -->
+<div class="px-margin-mobile py-space-sm flex flex-col gap-space-sm">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="w-full h-12 pl-10 pr-10 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm focus:bg-surface-container-lowest focus:outline-none transition-all" id="cropSearchInput" placeholder="Search crop (e.g., Magna Teff, Sidamo Coffee)..." type="search"/>
+<button aria-label="Voice input" class="absolute inset-y-0 right-0 pr-3 flex items-center text-on-surface-variant hover:text-primary transition-colors" id="voiceSearchBtn">
+<span class="material-symbols-outlined text-xl">mic</span>
+</button>
+</div>
+<!-- Filter Category Chips (Horizontal Scroll) -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 -mx-margin-mobile px-margin-mobile">
+<button class="filter-chip active flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm whitespace-nowrap transition-transform active:scale-95" data-filter="all">
+<span>All Regions</span>
+</button>
+<button class="filter-chip flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md shadow-sm whitespace-nowrap transition-transform active:scale-95" data-filter="oromia">
+<span>Oromia</span>
+</button>
+<button class="filter-chip flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md shadow-sm whitespace-nowrap transition-transform active:scale-95" data-filter="amhara">
+<span>Amhara</span>
+</button>
+<button class="filter-chip flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md shadow-sm whitespace-nowrap transition-transform active:scale-95" data-filter="snnpr">
+<span>Sidama / SNNP</span>
+</button>
+<div class="w-px h-5 bg-outline-variant mx-1 self-center opacity-60"></div>
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm shadow-sm whitespace-nowrap">
+<span class="material-symbols-outlined text-sm text-tertiary">storefront</span>
+<span>Merkato Base</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm shadow-sm whitespace-nowrap">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Today</span>
+</button>
+</div>
+</div>
+<!-- Interactive Highlight: Market Ticker Banner -->
+<div class="mx-margin-mobile my-space-xs p-3 rounded-xl bg-gradient-to-r from-primary-container to-secondary text-on-primary shadow-md relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl">trending_up</span>
+<div>
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider block">ECX Benchmark Index</span>
+<span class="font-numeric-data-md text-numeric-data-md font-bold leading-tight">2,410.8 ETB/Pt</span>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed/20 text-primary-fixed font-label-sm text-label-sm">
+          ▲ +2.4% Net
+        </span>
+<span class="block font-label-sm text-label-sm text-primary-fixed/80 mt-0.5">High Trading Vol</span>
+</div>
+</div>
+</div>
+<!-- Commodity Cards Section -->
+<div class="px-margin-mobile pt-space-sm pb-space-xs">
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">National Crop Rates</h3>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-0.5">
+        6 Active Commodities
+      </span>
+</div>
+<!-- Commodity Grid -->
+<div class="flex flex-col gap-3" id="commodityList">
+<!-- 1. Teff (Magna White) -->
+<div class="commodity-card rounded-xl bg-surface-container-lowest p-3.5 shadow-sm transition-all active:scale-[0.99] flex flex-col gap-2.5" data-name="Magna White Teff Grains">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">grain</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Teff (Magna White)</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">ECX A1</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Quintal (100kg Standard Bag)</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">8,450 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ETB</span></div>
+<span class="inline-flex items-center font-label-sm text-label-sm text-secondary font-bold">
+              ▲ +3.2% <span class="text-on-surface-variant font-normal ml-1">Bullish</span>
+</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t-0 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Top Hub: Addis Merkato</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">2,340 Bags Traded</span>
+</div>
+</div>
+<!-- 2. Coffee (Grade 1 Washed) -->
+<div class="commodity-card rounded-xl bg-surface-container-lowest p-3.5 shadow-sm transition-all active:scale-[0.99] flex flex-col gap-2.5" data-name="Washed Sidamo Coffee Beans">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">coffee</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Coffee (G1 Washed)</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-bold">Sidamo / Yirg</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Feresula (17kg Auction Unit)</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">19,200 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ETB</span></div>
+<span class="inline-flex items-center font-label-sm text-label-sm text-secondary font-bold">
+              ▲ +1.8% <span class="text-on-surface-variant font-normal ml-1">Export Surge</span>
+</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Top Hub: Hawassa / ECX Central</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Grade A Premium</span>
+</div>
+</div>
+<!-- 3. Maize (White) -->
+<div class="commodity-card rounded-xl bg-surface-container-lowest p-3.5 shadow-sm transition-all active:scale-[0.99] flex flex-col gap-2.5" data-name="White Maize Corn Bako">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">nutrition</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Maize (White Hybrid)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Quintal (100kg Standard Bag)</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">3,200 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ETB</span></div>
+<span class="inline-flex items-center font-label-sm text-label-sm text-error font-bold">
+              ▼ -1.5% <span class="text-on-surface-variant font-normal ml-1">Stable Supply</span>
+</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Top Hub: Adama Central</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bako Harvest Flow</span>
+</div>
+</div>
+<!-- 4. Wheat (Bread Grain) -->
+<div class="commodity-card rounded-xl bg-surface-container-lowest p-3.5 shadow-sm transition-all active:scale-[0.99] flex flex-col gap-2.5" data-name="Bread Wheat Arsi Bale">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-tertiary-fixed-dim flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">grass</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Wheat (Bread Grain)</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Arsi Origin</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Quintal (100kg Standard Bag)</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">4,850 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ETB</span></div>
+<span class="inline-flex items-center font-label-sm text-label-sm text-secondary font-bold">
+              ▲ +0.5% <span class="text-on-surface-variant font-normal ml-1">Firm</span>
+</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Top Hub: Addis / Shashamane</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mill Intake Steady</span>
+</div>
+</div>
+<!-- 5. Red Sorghum -->
+<div class="commodity-card rounded-xl bg-surface-container-lowest p-3.5 shadow-sm transition-all active:scale-[0.99] flex flex-col gap-2.5" data-name="Red Sorghum Hararghe">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">spa</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Red Sorghum</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Quintal (100kg Standard Bag)</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">3,100 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ETB</span></div>
+<span class="inline-flex items-center font-label-sm text-label-sm text-on-surface-variant font-bold">
+              ▬ 0.0% <span class="text-on-surface-variant font-normal ml-1">Stable</span>
+</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Top Hub: Dire Dawa / Harar</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Consistent Demand</span>
+</div>
+</div>
+<!-- 6. Malting Barley -->
+<div class="commodity-card rounded-xl bg-surface-container-lowest p-3.5 shadow-sm transition-all active:scale-[0.99] flex flex-col gap-2.5" data-name="Malting Barley Brewery">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">local_drink</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Malting Barley</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Brewery Std</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Quintal (100kg Standard Bag)</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">4,200 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ETB</span></div>
+<span class="inline-flex items-center font-label-sm text-label-sm text-secondary font-bold">
+              ▲ +2.1% <span class="text-on-surface-variant font-normal ml-1">Contract High</span>
+</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Top Hub: Gondar / Debre Birhan</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Active Agro-processing</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Multi-Market Regional Price Comparison Module -->
+<div class="px-margin-mobile pt-space-md pb-space-xs">
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Arbitrage & Logistics</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Magna Teff Across Regional Hubs</h3>
+</div>
+<span class="p-2 rounded-full bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-xl">compare_arrows</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3.5">
+        Price variance compared to Addis Merkato benchmark allows farm unions to optimize route dispatch.
+      </p>
+<!-- Multi-hub comparison listing -->
+<div class="space-y-2.5">
+<!-- Hub 1: Merkato Base -->
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Addis Merkato</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Central Grain Terminal</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">8,450 ETB</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Benchmark (0 ETB)</span>
+</div>
+</div>
+<!-- Hub 2: Adama -->
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">2</span>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Adama Central</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Oromia Junction Hub</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">8,100 ETB</div>
+<span class="inline-flex items-center font-label-sm text-label-sm text-secondary font-bold">
+              -350 ETB vs Addis
+            </span>
+</div>
+</div>
+<!-- Hub 3: Hawassa -->
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Hawassa City</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Southern Regional Depot</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">8,300 ETB</div>
+<span class="inline-flex items-center font-label-sm text-label-sm text-secondary font-bold">
+              -150 ETB vs Addis
+            </span>
+</div>
+</div>
+<!-- Hub 4: Bahir Dar -->
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">4</span>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Bahir Dar Terminal</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Amhara Agro Corridor</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-numeric-data-md text-numeric-data-md text-on-surface">7,850 ETB</div>
+<span class="inline-flex items-center font-label-sm text-label-sm text-secondary font-bold">
+              -600 ETB vs Addis
+            </span>
+</div>
+</div>
+</div>
+<div class="mt-3 text-center">
+<button class="font-label-sm text-label-sm text-primary font-bold inline-flex items-center gap-1 hover:underline">
+          View all 14 Regional Trading Points
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Visual Delight: Farmer Field Photo & Market Reality Card -->
+<div class="px-margin-mobile pt-space-xs">
+<div class="relative w-full h-36 rounded-2xl overflow-hidden shadow-sm flex items-end p-3.5">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Ethiopian farmer examining harvested white Magna teff grains inside a traditional woven basket in Oromia countryside during golden hour sunlight, lush green crops and acacia trees in soft focus background, authentic agricultural documentary photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnpkXWdZrgXfg2xrG27ZC9-ue2mApdQWfQ_hd0lmtSV-Qqwb4uMkAe8jp8KdyPy_G9AvAy7T_rTk4r4CwsGqmz-6kAqe88-g10ze7efBpXyXp-cDthkbG99sAUwRoJ5Ubh39Ych1x9XBqt6bkOOpRFzvGZZXL7ea9kr15W5Uc8XhgWc7waMPS61Rc-_Sxu0RJLGPlyH7ZEJj3NY6vnTbGAK5GdLRBlEWRolmlQmJ4HjSeD7yiPk4UZpQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between w-full text-white">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider block">Local Aggregation Advice</span>
+<span class="font-headline-sm text-headline-sm font-semibold leading-tight">Post-Harvest Moisture Standards</span>
+<span class="font-body-sm text-body-sm text-white/80 block mt-0.5">Ensure grain moisture < 13% for ECX Class 1 acceptance</span>
+</div>
+<span class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-xl text-white">verified</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Price Movement History Chart (30-day SVG Graphical Curve) -->
+<div class="px-margin-mobile pt-space-md pb-space-xs">
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Price Trend Analysis</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">30-Day Movement (ETB/Qt)</h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold">
+<span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span> Teff
+          </span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary-container font-bold">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container inline-block"></span> Maize
+          </span>
+</div>
+</div>
+<!-- SVG Sparkline & Multi-Curve Chart -->
+<div class="w-full mt-2 relative">
+<svg aria-label="30-day price comparison graph" class="w-full h-36 overflow-visible" viewbox="0 0 320 140">
+<defs>
+<lineargradient id="teffGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#004c22" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#004c22" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="maizeGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#705400" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#705400" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Guide Lines -->
+<line stroke="#d9e3f6" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="320" y1="20" y2="20"></line>
+<text fill="#707a6f" font-family="Inter" font-size="9" text-anchor="end" x="320" y="17">8,500 ETB</text>
+<line stroke="#d9e3f6" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="320" y1="65" y2="65"></line>
+<text fill="#707a6f" font-family="Inter" font-size="9" text-anchor="end" x="320" y="62">5,500 ETB</text>
+<line stroke="#d9e3f6" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="320" y1="110" y2="110"></line>
+<text fill="#707a6f" font-family="Inter" font-size="9" text-anchor="end" x="320" y="107">3,000 ETB</text>
+<!-- Area Fills -->
+<path d="M 0,45 Q 50,38 100,42 T 200,30 T 270,25 T 320,20 L 320,130 L 0,130 Z" fill="url(#teffGradient)"></path>
+<path d="M 0,105 Q 60,100 120,108 T 220,112 T 280,106 T 320,104 L 320,130 L 0,130 Z" fill="url(#maizeGradient)"></path>
+<!-- Teff Curve (Green) -->
+<path d="M 0,45 Q 50,38 100,42 T 200,30 T 270,25 T 320,20" fill="none" stroke="#004c22" stroke-linecap="round" stroke-width="2.5"></path>
+<circle cx="320" cy="20" fill="#004c22" r="4" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Maize Curve (Gold/Brown) -->
+<path d="M 0,105 Q 60,100 120,108 T 220,112 T 280,106 T 320,104" fill="none" stroke="#705400" stroke-linecap="round" stroke-width="2.5"></path>
+<circle cx="320" cy="104" fill="#705400" r="4" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+<!-- Time Axis Labels -->
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Day 1</span>
+<span>Day 10</span>
+<span>Day 20</span>
+<span class="font-bold text-on-surface">Today</span>
+</div>
+</div>
+<!-- Quick Insight Footer -->
+<div class="mt-3.5 p-2.5 rounded-xl bg-surface-container-high flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">lightbulb</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">Agronomist Insight:</span> Teff is trading at a 3-month peak ahead of the festive season. Good window for cooperative sales.
+        </p>
+</div>
+</div>
+</div>
+<!-- SMS & Push Price Alert Setup Box -->
+<div class="px-margin-mobile pt-space-sm pb-space-lg">
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-md relative overflow-hidden">
+<!-- Decorative Accent -->
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-xl">notifications_active</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Set Price Target Alert</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Receive SMS notifications in Amharic & English</span>
+</div>
+</div>
+</div>
+<form class="flex flex-col gap-3" id="priceAlertForm" onsubmit="event.preventDefault(); window.handleAlertSubmit();">
+<!-- Crop Select -->
+<div>
+<label class="font-label-md text-label-md text-on-surface font-semibold block mb-1">Select Crop</label>
+<div class="relative">
+<select class="w-full h-12 px-3 pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none appearance-none" id="alertCrop">
+<option selected="" value="teff">Magna White Teff (ETB/Qt)</option>
+<option value="coffee">Grade 1 Washed Coffee (ETB/Feresula)</option>
+<option value="maize">White Maize Hybrid (ETB/Qt)</option>
+<option value="wheat">Bread Grain Wheat (ETB/Qt)</option>
+<option value="sorghum">Red Sorghum (ETB/Qt)</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-xl">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<!-- Target Price Input (ETB) -->
+<div>
+<label class="font-label-md text-label-md text-on-surface font-semibold block mb-1">Target Trigger Price (ETB)</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3.5 flex items-center font-label-md text-label-md font-bold text-on-surface-variant">
+              ETB
+            </span>
+<input class="w-full h-12 pl-14 pr-16 text-right rounded-xl bg-surface-container-low text-on-surface font-numeric-data-md text-numeric-data-md font-bold focus:bg-surface-container-lowest focus:outline-none" id="targetPriceInput" type="number" value="8600"/>
+<span class="absolute inset-y-0 right-0 pr-3.5 flex items-center font-label-sm text-label-sm text-on-surface-variant">
+              / Quintal
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">Current rate: 8,450 ETB (+150 ETB threshold recommended)</span>
+</div>
+<!-- Delivery Channel Options (SMS / Push) -->
+<div>
+<label class="font-label-md text-label-md text-on-surface font-semibold block mb-1.5">Notification Channel</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="channel-option flex items-center gap-2 p-3 rounded-xl bg-surface-container-low cursor-pointer transition-all has-[:checked]:bg-primary-fixed has-[:checked]:text-on-primary-fixed">
+<input checked="" class="hidden" name="channel" type="radio" value="sms"/>
+<span class="material-symbols-outlined text-lg">sms</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md font-bold block truncate">SMS Direct</span>
+<span class="font-label-sm text-label-sm opacity-80 block truncate">+251 (9/7) Phone</span>
+</div>
+</label>
+<label class="channel-option flex items-center gap-2 p-3 rounded-xl bg-surface-container-low cursor-pointer transition-all has-[:checked]:bg-primary-fixed has-[:checked]:text-on-primary-fixed">
+<input class="hidden" name="channel" type="radio" value="push"/>
+<span class="material-symbols-outlined text-lg">phone_android</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md font-bold block truncate">AgriVision App</span>
+<span class="font-label-sm text-label-sm opacity-80 block truncate">Push Alert</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-12 mt-1 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md hover:bg-primary-container active:scale-[0.98] transition-all" id="alertSubmitBtn" type="submit">
+<span class="material-symbols-outlined text-xl">add_alert</span>
+<span>Activate Price Alert</span>
+</button>
+<!-- Dynamic Success Feedback Banner (Hidden by default) -->
+<div class="hidden mt-2 p-3 rounded-xl bg-surface-container-highest flex items-center gap-2 text-primary" id="alertSuccessBanner">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+<div class="font-body-sm text-body-sm">
+<span class="font-bold">Alert Confirmed!</span> You'll receive instant notification when Magna Teff reaches 8,600 ETB.
+          </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+  // Search filtering logic
+  const searchInput = document.getElementById('cropSearchInput');
+  const commodityCards = document.querySelectorAll('.commodity-card');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      commodityCards.forEach(card => {
+        const text = (card.getAttribute('data-name') || '').toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  // Filter chips active toggle
+  const filterChips = document.querySelectorAll('.filter-chip');
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary');
+        c.classList.add('bg-surface-container', 'text-on-surface');
+      });
+      chip.classList.add('bg-primary', 'text-on-primary');
+      chip.classList.remove('bg-surface-container', 'text-on-surface');
+    });
+  });
+
+  // Price alert activation simulated reaction
+  window.handleAlertSubmit = function() {
+    const btn = document.getElementById('alertSubmitBtn');
+    const banner = document.getElementById('alertSuccessBanner');
+    if (!btn || !banner) return;
+
+    btn.disabled = true;
+    btn.innerHTML = `<span class="material-symbols-outlined text-xl animate-spin">refresh</span><span>Connecting ECX Feed...</span>`;
+
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-xl">done</span><span>Alert Active</span>`;
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-secondary');
+      banner.classList.remove('hidden');
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = `<span class="material-symbols-outlined text-xl">add_alert</span><span>Activate Price Alert</span>`;
+        btn.classList.remove('bg-secondary');
+        btn.classList.add('bg-primary');
+      }, 4000);
+    }, 600);
+  };
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary font-label-md"><div class="flex items-center justify-around h-16 px-space-xs max-w-md mx-auto"><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-[10px] leading-tight">Home</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="crop-scanner" href="#"><span class="material-symbols-outlined text-[22px]">document_scanner</span><span class="font-label-sm text-[10px] leading-tight">Scanner</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="weather" href="#"><span class="material-symbols-outlined text-[22px]">partly_cloudy_day</span><span class="font-label-sm text-[10px] leading-tight">Weather</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-12 h-12 transition-colors text-primary font-label-md" data-path="market" href="#"><span class="material-symbols-outlined text-[22px]">payments</span><span class="font-label-sm text-[10px] leading-tight">Market</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[22px]">smart_toy</span><span class="font-label-sm text-[10px] leading-tight">AI Help</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-farm" href="#"><span class="material-symbols-outlined text-[22px]">agriculture</span><span class="font-label-sm text-[10px] leading-tight">My Farm</span></a></div></nav></body></html>

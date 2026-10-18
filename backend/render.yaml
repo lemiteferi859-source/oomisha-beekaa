@@ -1,0 +1,7 @@
+{
+  "name": "oomisha-beekaa-backend",
+  "env": "node",
+  "buildCommand": "npm install",
+  "startCommand": "node server.js",
+  "healthCheckPath": "/"
+}

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-container": "#705400", "inverse-primary": "#8bd79b", "tertiary": "#533e00", "primary-container": "#166534", "secondary": "#006e2f", "surface-dim": "#d0dbed", "on-secondary-container": "#007432", "outline": "#707a6f", "surface-container-low": "#eff4ff", "on-error-container": "#93000a", "on-background": "#121c2a", "error-container": "#ffdad6", "background": "#f8f9ff", "on-secondary-fixed": "#002109", "secondary-fixed": "#6bff8f", "on-primary-fixed": "#00210b", "outline-variant": "#bfc9bd", "primary-fixed-dim": "#8bd79b", "on-primary-fixed-variant": "#005226", "on-surface": "#121c2a", "error": "#ba1a1a", "surface-container-high": "#dee9fc", "on-secondary": "#ffffff", "surface-container": "#e6eeff", "surface-container-lowest": "#ffffff", "primary-fixed": "#a6f4b5", "tertiary-fixed-dim": "#f7be1d", "on-secondary-fixed-variant": "#005321", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "on-error": "#ffffff", "secondary-fixed-dim": "#4ae176", "secondary-container": "#6bff8f", "on-tertiary-fixed-variant": "#5a4300", "on-primary-container": "#93e0a2", "on-tertiary-fixed": "#251a00", "surface-bright": "#f8f9ff", "primary": "#004c22", "on-tertiary-container": "#ffc731", "surface-tint": "#1f6c3a", "surface-container-highest": "#d9e3f6", "tertiary-fixed": "#ffdf9a", "on-surface-variant": "#404940", "surface": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "inverse-surface": "#27313f", "surface-variant": "#d9e3f6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "gutter": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin": "2rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-md": "1rem" }, fontFamily: { "body-sm": ["Inter"], "headline-md": ["Inter"], "numeric-data-md": ["Inter"], "numeric-data-lg": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "headline-xl-mobile": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "label-lg": ["Inter"], "headline-sm": ["Inter"], "headline-lg-mobile": ["Inter"] }, fontSize: { "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "numeric-data-md": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "numeric-data-lg": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary rounded-lg transition-colors" onclick="history.back()"><span class="material-symbols-outlined">arrow_back_ios_new</span></button><img alt="AgriVision Ethiopia Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VjWr67XKqiy6YJs5uQuTydU0ElR1M7zVS9nSQNEuchjQWlGYhJNGaTOXuLeWuOELzEPVVgvoCNF7k1VSsR246aGKrbJkQrG9JamN0M7oekA8gqO2CJQfvlm7_JhBToPWVN7mvWUQ2hM6Whw78GuIz16f0e_9NMVzaM3K6CuJxANvV12qvPZmKs7AsaM2qD_HHm_OVqxUgk_6LkiQ8EaZozVlDq91uIMtgKM5xaQ4_07WcUy1fmnkyNQc34"/><div class="flex flex-col truncate pl-space-xs"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">AgriVision ET</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Admin Portal</h1></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-JZ2y2rsBE6Z5l9vNa9s6UzVl0bu9sac_hGxRqAc82nFzeKp7bUwdczaOV9LLvyhqvo3rQsH8c7lGLDzRnDh4fAC009epCuYyIXYIQnd0dOqTaCpIiODpLQ00q1MaDF9VoLntJfVWonP_T-Nzf9Z-Ymy4QvUcAqGKlySDn_qK4-QEf_N3TcusRS8h_4i-sz9d3vec6o0y1RH7yhnvhnzFI3SBvYn-9zYbLGJEG_AkL94-nc2OvNBx5w"/></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<!-- Interactive Admin Status Bar -->
+<div class="px-margin-mobile py-space-sm bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs bg-primary-container/10 px-space-sm py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary">ADMIN MODE • NATIONAL OVERVIEW</span>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-highest px- space-sm py-1 rounded-lg text-on-surface hover:bg-surface-container-high transition-colors" id="viewToggleBtn" onclick="toggleRoleView()">
+<span class="material-symbols-outlined text-sm">swap_horiz</span>
+<span class="font-label-sm text-label-sm">Farmer View</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Portrait photo of an experienced Ethiopian female agronomist and technology director, warm natural lighting, high detail, wearing professional field attire with a confident reassuring smile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsRkD_eEzTtk-27DNhWYPT2FhnsdFCT51niSshnVRAb8leim5gLpzT0uTVMINL0WGRJRNM13MEvK8TN7QwGKbqAs_LO_1uU7GlbjmsqlVxmpAXAIRd8oXBi0L08jMVh8mUAcoTPwoo_RHqUZFvc6y-tuNvFObIlLIVFUloVAkqpYZ4bEhZp7sLnA2aChgDB8KbfL9VjzV4p8QbrCaaVQSO07geqUHrgKsAYGEFdobyRFf30rGz7XSHTQ"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-secondary rounded-full ring-2 ring-surface"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Dr. Almaz Kebede</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">National AgTech Administrator</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Notifications" class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface text-on-surface hover:text-primary shadow-sm">
+<span class="material-symbols-outlined text-xl">notifications_active</span>
+</button>
+<button aria-label="System Settings" class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface text-on-surface hover:text-primary shadow-sm">
+<span class="material-symbols-outlined text-xl">tune</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Showcase Notice Banner -->
+<div class="mx-margin-mobile mt-space-sm bg-tertiary-container/10 p-space-sm rounded-lg flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-lg flex-shrink-0 mt-0.5">info</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Showcase Simulation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Administrative controls and metrics shown are simulated for Hackathon showcase.</p>
+</div>
+</div>
+<!-- Platform Core KPI Grid -->
+<div class="px-margin-mobile pt-space-md grid grid-cols-2 gap-space-sm">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Registered Farmers</span>
+<div class="w-7 h-7 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">groups</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<span class="font-numeric-data-lg text-numeric-data-lg text-on-surface">14,250</span>
+<div class="flex items-center gap-1 text-secondary pt-0.5">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span class="font-label-sm text-label-sm">+312 this week</span>
+</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">AI Crop Scans</span>
+<div class="w-7 h-7 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-base">document_scanner</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<span class="font-numeric-data-lg text-numeric-data-lg text-on-surface">48,920</span>
+<div class="flex items-center gap-1 text-primary pt-0.5">
+<span class="material-symbols-outlined text-xs">verified</span>
+<span class="font-label-sm text-label-sm">94.2% accuracy</span>
+</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Active Coverage</span>
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-base">domain</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<span class="font-numeric-data-lg text-numeric-data-lg text-on-surface">38 Woredas</span>
+<div class="flex items-center gap-1 text-on-surface-variant pt-0.5">
+<span class="material-symbols-outlined text-xs">map</span>
+<span class="font-label-sm text-label-sm">6 Regional States</span>
+</div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-error">Disease Alerts</span>
+<div class="w-7 h-7 rounded-full bg-error-container/30 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-base">fmd_bad</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<span class="font-numeric-data-lg text-numeric-data-lg text-error">3 Active</span>
+<div class="flex items-center gap-1 text-error pt-0.5">
+<span class="material-symbols-outlined text-xs">priority_high</span>
+<span class="font-label-sm text-label-sm">Flagged follow-up</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Regional Disease Outbreak Surveillance -->
+<div class="px-margin-mobile pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">coronavirus</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Outbreak Analytics & Heatmap</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/20 px-2 py-0.5 rounded-full">Live Telemetry</span>
+</div>
+<!-- Mini Spatial Heatmap Visualizer -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden shadow-sm bg-surface-container-high">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Satellite top-down map overview of Ethiopian agricultural highlands showing heat map zones of green, amber, and red focal points over East Shewa, Sidama, and Bale regions, clear UI cartography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDw4mQ17WBCXhER9B9BojI2VWHUssrkA1hfzTYPjkmAFRDUx7TSsL59jfD5CBxCbX_rg3Ga-S0aH3nvTfjX-p7Sm3LZJ58aVnVcQENXWGwqIT8oXSC7sbnPM90MJN_7KdLPabv-O-lpVaRsr4qSRL-vx8RBeMVzeU2-waPd9jnRQrniv_ZaVUz_vbELOG2mZuv2C_skFF2nrwhWosDEaAtAYPQbA_ma-RCaHouldPZOya6waZ_BQZAwLg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-variant/90 via-surface-variant/30 to-transparent"></div>
+<!-- Interactive Hotspot Pins -->
+<div class="absolute top-8 left-1/3 flex items-center gap-1 bg-surface/90 backdrop-blur-md px-2 py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">East Shewa (Maize)</span>
+</div>
+<div class="absolute bottom-10 right-1/4 flex items-center gap-1 bg-surface/90 backdrop-blur-md px-2 py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Sidama (Coffee)</span>
+</div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center text-on-surface">
+<span class="font-label-sm text-label-sm bg-surface/80 backdrop-blur-sm px-2 py-0.5 rounded">Highland Cluster AI Node</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface/80 backdrop-blur-sm px-2 py-0.5 rounded">Updated 6m ago</span>
+</div>
+</div>
+<!-- Top Identified Disease Metrics Stack -->
+<div class="flex flex-col gap-space-xs">
+<!-- Disease 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-error-container/30 flex items-center justify-center text-error flex-shrink-0">
+<span class="material-symbols-outlined text-lg">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Maize Leaf Blight</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Oromia • East Shewa</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-numeric-data-md text-numeric-data-md text-error">1,240</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">detections</span>
+</div>
+</div>
+<!-- Disease 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/10 flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-lg">bug_report</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Coffee Berry Borer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Sidama / Jimma Zones</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-numeric-data-md text-numeric-data-md text-tertiary">890</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">detections</span>
+</div>
+</div>
+<!-- Disease 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-lg">grass</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Wheat Stem Rust</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Amhara / Bale Region</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-numeric-data-md text-numeric-data-md text-on-surface">610</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">detections</span>
+</div>
+</div>
+</div>
+<!-- Outbreak Broadcast Action Trigger -->
+<button class="w-full min-h-[48px] bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-space-sm shadow-md active:bg-primary-container transition-all" id="broadcastBtn" onclick="triggerBroadcastModal()">
+<span class="material-symbols-outlined text-xl">cell_tower</span>
+<span>Broadcast SMS Advisory to 3,400 Farmers</span>
+</button>
+</div>
+<!-- Market Feeds & ECX Controls -->
+<div class="px-margin-mobile pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">storefront</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Commodity Pricing Feed (ECX)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Synced 15 mins ago</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-body-md text-body-md text-on-surface">Ethiopian Commodity Exchange Bridge</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container/20 text-secondary px-2 py-0.5 rounded-full font-medium">Automatic Sync</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs py-space-xs bg-surface-container-low p-space-xs rounded-lg">
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Teff (Magna)</span>
+<span class="font-numeric-data-md text-numeric-data-md text-on-surface pt-0.5">8,450</span>
+<span class="font-label-sm text-label-sm text-secondary">ETB/Qt</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Coffee (G1)</span>
+<span class="font-numeric-data-md text-numeric-data-md text-on-surface pt-0.5">24,200</span>
+<span class="font-label-sm text-label-sm text-secondary">ETB/Qt</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Wheat (White)</span>
+<span class="font-numeric-data-md text-numeric-data-md text-on-surface pt-0.5">5,100</span>
+<span class="font-label-sm text-label-sm text-secondary">ETB/Qt</span>
+</div>
+</div>
+<button class="w-full min-h-[44px] bg-surface-container-highest text-primary hover:bg-surface-container-high rounded-lg font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" onclick="approvePriceModal()">
+<span class="material-symbols-outlined text-base">rule</span>
+<span>Review & Approve Commodity Rates</span>
+</button>
+</div>
+</div>
+<!-- User & Extension Worker Management -->
+<div class="px-margin-mobile pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">badge</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Field Workers & Farmers</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">1,248 Active</span>
+</div>
+<!-- Search & Filter Controls -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm rounded-xl shadow-sm min-h-[48px]">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent w-full text-on-surface font-body-md text-body-md focus:outline-none placeholder:text-on-surface-variant/60" id="userSearchInput" onkeyup="filterUsers()" placeholder="Search by name, kebele, or role..." type="text"/>
+<button aria-label="Filters" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary rounded">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+</button>
+</div>
+<!-- Quick Role Tabs -->
+<div class="flex gap-space-xs overflow-x-auto pb-1">
+<button class="px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm whitespace-nowrap">All Roles</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap hover:bg-surface-container">Extension (DA)</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap hover:bg-surface-container">Cooperative Leads</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap hover:bg-surface-container">Smallholders</button>
+</div>
+<!-- User Roster Cards -->
+<div class="flex flex-col gap-space-xs" id="userRosterList">
+<!-- User Card 1 -->
+<div class="user-item bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of an Ethiopian male farmer wearing a traditional hat, field background in Adaa woreda, natural daylight, warm realistic photographic portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx8l_51gX3TutHjTlSrz9pPtHniwFoFVp3UsnEEtGaAf-F_aLk62uN7CkC1g0fO7_ING43blv0kp562K2GhfGXVoPxKcEq1FxdmwUu-aUXVmC0zXLJzojDwWfvR9eNVL1Hw6U0iWT-YcZriTD_gLXbldPvVOyLGxvBwnTd2BSioTiXs46IEncLOn-re8nOcdd8t9JZqpbJTrurjS7QWVwcsNQiUH2r0u22cz1pQO7wDTlJy_57AhcKLw"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate user-name">Abebe Tesfaye</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Smallholder Farmer • Ada'a, Oromia</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container/20 text-secondary px-2 py-0.5 rounded-full">Active</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<span class="font-body-sm text-body-sm text-on-surface-variant">14 leaf scans • Teff & Chickpea</span>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md rounded-lg transition-colors" onclick="inspectUserModal('Abebe Tesfaye', 'Farmer', 'Ada\'a')">
+            Review
+          </button>
+</div>
+</div>
+<!-- User Card 2 -->
+<div class="user-item bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of an Ethiopian young agricultural development officer DA holding a tablet in Jimma coffee farm, smiling professional agronomist outdoors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDalI773csVUEE4YJwxtOzEq63612f4-2Kq2VmYXmyq9TNMMeyJnZAMeXeZoM5w1rRfawTH7yx-wUif8gJNvj--iwNmxmQE5nM2mTyoaQIoUNP7Y6dHRkeEtAryI9o_ImzaPT7gMbAc0q_rMlIPH8AFKlKXuWFsyfDc5YOvBtK-OHURaGdGcjn5vM5TNsoI5THEXDCXuhNDqpiHYJrGVdSK-0ZVXTdq1JJtle75G2O70MxiCHW3ddnJtg"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate user-name">Dawit Haile</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">DA Extension Officer • Jimma Zone</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-container/20 text-primary px-2 py-0.5 rounded-full">Verified</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">82 field validations • Coffee & Maize</span>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md rounded-lg transition-colors" onclick="contactUserModal('Dawit Haile')">
+            Contact
+          </button>
+</div>
+</div>
+<!-- User Card 3 -->
+<div class="user-item bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Professional portrait of an Ethiopian female cooperative manager standing proudly in front of a grain warehouse in Hawassa, high quality natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB22n1IZgY1pQ3O_aGUklwW3c0a6RBqxAvKk4JaGGfCw6u8-hV6nni85Naa1a5v0l85EFP_7mx4-TtaG4BdNc2eXcVRnBk3QA1zj5XM-0PbByADtEg-aom7oukEIIIWHIeYWFbKP5d7_xVrFXeBqsjlAEeziy3fcLzgMpnMUbQ_ImoR-3vKiW4mKrQUTgmwP107GS0WPdYI0zKtzqM4gIyJtL1IAn7o61VtW_iiGRjK-I8UDN1crvLaeg"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate user-name">Bethlehem Girma</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Cooperative Lead • Hawassa Cluster</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container/20 text-secondary px-2 py-0.5 rounded-full">Active</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">450 farmers managed • Seed distributor</span>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md rounded-lg transition-colors" onclick="manageUserModal('Bethlehem Girma')">
+            Manage
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Platform Configuration & System Status -->
+<div class="px-margin-mobile pt-space-lg mb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">settings_applications</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">System Configuration & Health</h2>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Languages Configuration -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">Active Multilingual Pipelines</span>
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> English
+          </span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> አማርኛ (Amharic)
+          </span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Afaan Oromoo
+          </span>
+</div>
+</div>
+<!-- Telemetry Status Indicators -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs border-t-0">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg">dns</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Server Uptime</span>
+<span class="font-label-md text-label-md text-on-surface">99.8% Nominal</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">neurology</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CropNet Model</span>
+<span class="font-label-md text-label-md text-on-surface">v4.2 Operational</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Feedback Sheet (Hidden default) -->
+<div class="fixed bottom-6 left-margin-mobile right-margin-mobile bg-inverse-surface text-inverse-on-surface p-space-sm rounded-xl shadow-xl flex items-center justify-between transition-opacity duration-300 opacity-0 pointer-events-none z-50" id="toastNotification">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-lg" id="toastIcon">check_circle</span>
+<span class="font-body-sm text-body-sm" id="toastMessage">Action dispatched successfully.</span>
+</div>
+<button class="text-inverse-on-surface/80 hover:text-inverse-on-surface" onclick="dismissToast()">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+</div>
+<script>
+  function showToast(msg, icon = 'check_circle') {
+    const toast = document.getElementById('toastNotification');
+    const label = document.getElementById('toastMessage');
+    const iconEl = document.getElementById('toastIcon');
+    if (!toast || !label) return;
+    label.innerText = msg;
+    if (iconEl) iconEl.innerText = icon;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      dismissToast();
+    }, 3800);
+  }
+
+  function dismissToast() {
+    const toast = document.getElementById('toastNotification');
+    if (toast) {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }
+  }
+
+  function toggleRoleView() {
+    const btn = document.getElementById('viewToggleBtn');
+    const current = btn.innerText.includes('Farmer');
+    if (current) {
+      btn.innerHTML = `<span class="material-symbols-outlined text-sm">swap_horiz</span><span class="font-label-sm text-label-sm">Admin View</span>`;
+      showToast('Switched to simulated Farmer Mode for testing', 'person');
+    } else {
+      btn.innerHTML = `<span class="material-symbols-outlined text-sm">swap_horiz</span><span class="font-label-sm text-label-sm">Farmer View</span>`;
+      showToast('Restored National AgTech Admin Portal', 'admin_panel_settings');
+    }
+  }
+
+  function triggerBroadcastModal() {
+    showToast('Broadcasting SMS alert to 3,400 farmers in East Shewa...', 'send');
+  }
+
+  function approvePriceModal() {
+    showToast('Latest ECX commodity rates verified & locked for regional markets', 'verified');
+  }
+
+  function inspectUserModal(name, role, zone) {
+    showToast(`Opening diagnostic scans and record for ${name} (${zone})`, 'folder_open');
+  }
+
+  function contactUserModal(name) {
+    showToast(`Initiating direct voice link with Extension DA ${name}`, 'call');
+  }
+
+  function manageUserModal(name) {
+    showToast(`Loaded cooperative grain quotas for ${name}`, 'tune');
+  }
+
+  function filterUsers() {
+    const input = document.getElementById('userSearchInput');
+    const filter = input.value.toLowerCase();
+    const roster = document.getElementById('userRosterList');
+    const items = roster.getElementsByClassName('user-item');
+
+    for (let i = 0; i < items.length; i++) {
+      const text = items[i].innerText.toLowerCase();
+      if (text.includes(filter)) {
+        items[i].style.display = 'flex';
+      } else {
+        items[i].style.display = 'none';
+      }
+    }
+  }
+</script></main></body></html>
