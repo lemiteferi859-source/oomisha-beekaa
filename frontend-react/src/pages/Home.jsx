@@ -13,7 +13,7 @@ function Home() {
       <section className="w-full bg-gradient-to-b from-green-100/60 to-transparent py-14 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center space-x-2 bg-green-200/60 text-brandGreen text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
-            <span>🌾 Smart Agriculture Platform</span>
+            <span>🌾 {t('Smart Agriculture Platform')}</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">
@@ -73,7 +73,7 @@ function Home() {
       {/* Feature Cards Grid */}
       <section className="max-w-6xl w-full px-4 py-10">
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">
-          Core Agricultural Tools
+          {t('Core Agricultural Tools')}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -96,7 +96,7 @@ function Home() {
                 to="/disease"
                 className="w-full block text-center bg-brandGreen hover:bg-green-800 text-white font-semibold py-2.5 rounded-xl transition shadow-sm"
               >
-                Scan Crop Now →
+                {t('Scan Crop Now')} →
               </Link>
             </div>
           </div>
@@ -119,7 +119,7 @@ function Home() {
                 to="/weather"
                 className="w-full block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition shadow-sm"
               >
-                View Weather →
+                {t('View Weather')} →
               </Link>
             </div>
           </div>
@@ -142,7 +142,7 @@ function Home() {
                 to="/market"
                 className="w-full block text-center bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2.5 rounded-xl transition shadow-sm"
               >
-                Explore Market Rates →
+                {t('Explore Market Rates')} →
               </Link>
             </div>
           </div>

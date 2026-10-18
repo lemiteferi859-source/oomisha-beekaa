@@ -34,7 +34,7 @@ function Dashboard() {
                 {user?.role || 'farmer'}
               </span>
               <span className="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                {user?.preferredLanguage === 'om' ? 'Afaan Oromoo' : 'English'}
+                {user?.preferredLanguage === 'om' ? 'Afaan Oromoo' : user?.preferredLanguage === 'am' ? 'አማርኛ (Amharic)' : 'English'}
               </span>
             </div>
           </div>
@@ -105,7 +105,7 @@ function Dashboard() {
             </tr>
             <tr>
               <td className="px-6 py-4 font-medium text-gray-500">Preferred Language</td>
-              <td className="px-6 py-4 text-gray-900">{user?.preferredLanguage === 'om' ? 'Afaan Oromoo' : 'English'}</td>
+              <td className="px-6 py-4 text-gray-900">{user?.preferredLanguage === 'om' ? 'Afaan Oromoo' : user?.preferredLanguage === 'am' ? 'አማርኛ (Amharic)' : 'English'}</td>
             </tr>
             <tr>
               <td className="px-6 py-4 font-medium text-gray-500">Account ID</td>

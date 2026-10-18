@@ -123,6 +123,7 @@ function Register() {
               >
                 <option value="en">English</option>
                 <option value="om">Afaan Oromoo</option>
+                <option value="am">አማርኛ (Amharic)</option>
               </select>
             </div>
 

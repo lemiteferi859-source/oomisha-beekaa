@@ -73,14 +73,23 @@ function Navbar() {
               <button 
                 onClick={() => changeLanguage('en')} 
                 className={`text-xs px-2.5 py-1 rounded font-bold transition ${i18n.language === 'en' ? 'bg-white text-brandGreen shadow-sm' : 'text-green-100 hover:text-white'}`}
+                title="English"
               >
                 EN
               </button>
               <button 
                 onClick={() => changeLanguage('om')} 
                 className={`text-xs px-2.5 py-1 rounded font-bold transition ${i18n.language === 'om' ? 'bg-white text-brandGreen shadow-sm' : 'text-green-100 hover:text-white'}`}
+                title="Afaan Oromoo"
               >
                 OM
+              </button>
+              <button 
+                onClick={() => changeLanguage('am')} 
+                className={`text-xs px-2.5 py-1 rounded font-bold transition ${i18n.language === 'am' ? 'bg-white text-brandGreen shadow-sm' : 'text-green-100 hover:text-white'}`}
+                title="አማርኛ (Amharic)"
+              >
+                AM
               </button>
             </div>
 
@@ -95,9 +104,9 @@ function Navbar() {
                   </div>
                   <span className="text-sm font-semibold text-white max-w-[120px] truncate">{user.name}</span>
                 </div>
-                <Link to="/dashboard" className="text-sm px-3 py-1.5 rounded-lg hover:bg-green-700/60 transition font-medium">Dashboard</Link>
+                <Link to="/dashboard" className="text-sm px-3 py-1.5 rounded-lg hover:bg-green-700/60 transition font-medium">{t('Dashboard')}</Link>
                 {user.role === 'admin' && (
-                  <Link to="/admin" className="text-sm px-3 py-1.5 rounded-lg bg-yellow-500/90 hover:bg-yellow-400 text-gray-900 font-bold transition shadow-sm">Admin</Link>
+                  <Link to="/admin" className="text-sm px-3 py-1.5 rounded-lg bg-yellow-500/90 hover:bg-yellow-400 text-gray-900 font-bold transition shadow-sm">{t('Admin Panel')}</Link>
                 )}
                 <button 
                   onClick={handleLogout} 
@@ -139,6 +148,12 @@ function Navbar() {
                 className={`text-xs px-2 py-0.5 rounded font-bold ${i18n.language === 'om' ? 'bg-white text-brandGreen' : 'text-green-100'}`}
               >
                 OM
+              </button>
+              <button 
+                onClick={() => changeLanguage('am')} 
+                className={`text-xs px-2 py-0.5 rounded font-bold ${i18n.language === 'am' ? 'bg-white text-brandGreen' : 'text-green-100'}`}
+              >
+                AM
               </button>
             </div>
 
@@ -207,7 +222,7 @@ function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block px-3 py-2 rounded-md font-medium ${isActive('/dashboard') ? 'bg-green-800 text-white' : 'text-green-100 hover:bg-green-800/60'}`}
                 >
-                  📊 Dashboard
+                  📊 {t('Dashboard')}
                 </Link>
                 {user.role === 'admin' && (
                   <Link
@@ -215,7 +230,7 @@ function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="block px-3 py-2 rounded-md font-bold bg-yellow-500/90 hover:bg-yellow-400 text-gray-900 shadow-sm"
                   >
-                    ⚙️ Admin Panel
+                    ⚙️ {t('Admin Panel')}
                   </Link>
                 )}
                 <button 
