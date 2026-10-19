@@ -1,12 +1,33 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { useTranslation } from 'react-i18next';
+import API from '../api';
 
 function Dashboard() {
   const { user, logout } = useContext(AuthContext);
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [history, setHistory] = useState([]);
+  const [loadingHistory, setLoadingHistory] = useState(true);
+
+  useEffect(() => {
+    const fetchHistory = async () => {
+      if (!user?.token) return;
+      try {
+        const res = await API.get('/api/diseases/my-history', {
+          headers: { Authorization: `Bearer ${user.token}` }
+        });
+        setHistory(res.data);
+      } catch (err) {
+        console.error('Failed to load diagnosis history:', err);
+      } finally {
+        setLoadingHistory(false);
+      }
+    };
+
+    fetchHistory();
+  }, [user]);
 
   const handleLogout = () => {
     logout();
@@ -84,6 +105,66 @@ function Dashboard() {
             <p className="text-xs text-gray-500">Check latest crop rates</p>
           </div>
         </Link>
+      </div>
+
+      {/* Past Diagnoses History Section */}
+      <div className="mb-8">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-lg font-bold text-gray-800 flex items-center gap-2">
+            <span>🔬</span>
+            <span>My Crop Diagnosis History ({history.length})</span>
+          </h2>
+          <Link to="/disease" className="text-xs font-bold text-brandGreen hover:underline">
+            + New Scan
+          </Link>
+        </div>
+
+        {loadingHistory ? (
+          <div className="bg-white p-8 rounded-xl text-center text-gray-400 border border-gray-100 text-sm">
+            Loading past diagnoses from cloud database...
+          </div>
+        ) : history.length === 0 ? (
+          <div className="bg-white p-8 rounded-2xl text-center border border-gray-100 shadow-sm">
+            <div className="text-3xl mb-2">🌱</div>
+            <p className="font-bold text-gray-700">No crop diagnoses recorded yet</p>
+            <p className="text-xs text-gray-400 mt-1 max-w-sm mx-auto">
+              Whenever you scan a crop leaf or report symptoms, your AI reports and treatments will be automatically saved here.
+            </p>
+            <Link
+              to="/disease"
+              className="inline-block mt-4 bg-brandGreen text-white text-xs font-bold px-4 py-2 rounded-xl shadow-sm hover:bg-green-800 transition"
+            >
+              Scan Your First Crop Now
+            </Link>
+          </div>
+        ) : (
+          <div className="space-y-3">
+            {history.map((item) => (
+              <div key={item._id} className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:border-green-300 transition">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">🌿</span>
+                    <h3 className="font-bold text-gray-900 text-base">{item.diseaseName}</h3>
+                    <span className="bg-green-100 text-brandGreen text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+                      {item.cropAffected}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs">
+                    <span className="font-semibold text-brandGreen bg-green-50 px-2 py-0.5 rounded">
+                      {item.confidenceScore}% Confidence
+                    </span>
+                    <span className="text-gray-400">
+                      {new Date(item.createdAt).toLocaleDateString()}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed bg-gray-50/80 p-3 rounded-xl border border-gray-100 mt-2">
+                  <strong>Treatment:</strong> {item.treatment}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Account Details Card */}

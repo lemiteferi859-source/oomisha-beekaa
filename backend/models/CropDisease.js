@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
 const cropDiseaseSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: false
+  },
   diseaseName: {
     type: String,
     required: true,
@@ -11,7 +16,7 @@ const cropDiseaseSchema = new mongoose.Schema({
   },
   symptoms: {
     type: [String],
-    required: true,
+    default: [],
   },
   treatment: {
     type: String,
@@ -19,7 +24,12 @@ const cropDiseaseSchema = new mongoose.Schema({
   },
   confidenceScore: {
     type: Number,
+    default: 85,
   },
+  imageUrl: {
+    type: String,
+    default: null
+  }
 }, { timestamps: true });
 
 module.exports = mongoose.model('CropDisease', cropDiseaseSchema);
