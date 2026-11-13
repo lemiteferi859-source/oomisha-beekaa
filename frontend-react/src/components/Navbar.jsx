@@ -38,7 +38,7 @@ function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex space-x-2 items-center">
+          <div className="hidden lg:flex space-x-1.5 items-center">
             <Link 
               to="/" 
               className={`px-3 py-2 rounded-md font-medium text-sm transition ${isActive('/') ? 'bg-green-800 text-white shadow-inner' : 'hover:bg-green-700/60'}`}
@@ -62,6 +62,12 @@ function Navbar() {
               className={`px-3 py-2 rounded-md font-medium text-sm transition ${isActive('/market') ? 'bg-green-800 text-white shadow-inner' : 'hover:bg-green-700/60'}`}
             >
               📈 {t('Market Prices')}
+            </Link>
+            <Link 
+              to="/calendar" 
+              className={`px-3 py-2 rounded-md font-medium text-sm transition ${isActive('/calendar') ? 'bg-green-800 text-white shadow-inner' : 'hover:bg-green-700/60'}`}
+            >
+              📅 {t('Crop Calendar')}
             </Link>
           </div>
 
@@ -206,6 +212,13 @@ function Navbar() {
             className={`block px-3 py-2 rounded-md font-medium ${isActive('/market') ? 'bg-green-800 text-white' : 'text-green-100 hover:bg-green-800/60'}`}
           >
             📈 {t('Market Prices')}
+          </Link>
+          <Link 
+            to="/calendar" 
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block px-3 py-2 rounded-md font-medium ${isActive('/calendar') ? 'bg-green-800 text-white' : 'text-green-100 hover:bg-green-800/60'}`}
+          >
+            📅 {t('Crop Calendar')}
           </Link>
 
           <div className="pt-3 border-t border-green-800 flex flex-col space-y-2">

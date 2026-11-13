@@ -15,6 +15,7 @@ import Dashboard from './pages/Dashboard';
 import CropDisease from './pages/CropDisease';
 import Weather from './pages/Weather';
 import Market from './pages/Market';
+import Calendar from './pages/Calendar';
 import AdminPanel from './pages/AdminPanel';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
@@ -37,6 +38,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/market" element={<Market />} />
               <Route path="/weather" element={<Weather />} />
+              <Route path="/calendar" element={<Calendar />} />
 
               {/* Protected Routes (Login required) */}
               <Route path="/disease" element={

@@ -9,6 +9,7 @@ const resources = {
       "Crop Disease Detection": "Crop Disease Detection",
       "Weather Forecast": "Weather Forecast",
       "Market Prices": "Market Prices",
+      "Crop Calendar": "Crop Calendar",
       "Home": "Home",
       "Login": "Login",
       "Register": "Register",
@@ -22,7 +23,9 @@ const resources = {
       "Core Agricultural Tools": "Core Agricultural Tools",
       "Scan Crop Now": "Scan Crop Now",
       "View Weather": "View Weather",
-      "Explore Market Rates": "Explore Market Rates"
+      "Explore Market Rates": "Explore Market Rates",
+      "Price Trends": "Price Trends",
+      "Season Advisory": "Season Advisory"
     }
   },
   om: {
@@ -31,6 +34,7 @@ const resources = {
       "Crop Disease Detection": "Dhukkuba Midhaanii Adda Baasuu",
       "Weather Forecast": "Raaga Haala Qilleensaa",
       "Market Prices": "Gatii Gabaa",
+      "Crop Calendar": "Kalandara Midhaanii",
       "Home": "Mana",
       "Login": "Seeni",
       "Register": "Galmaa'i",
@@ -44,7 +48,9 @@ const resources = {
       "Core Agricultural Tools": "Meeshaalee Qonnaa Ijoo",
       "Scan Crop Now": "Midhaan Qoradhu",
       "View Weather": "Haala Qilleensaa Ilaali",
-      "Explore Market Rates": "Gatii Gabaa Ilaali"
+      "Explore Market Rates": "Gatii Gabaa Ilaali",
+      "Price Trends": "Ilaalcha Gatii",
+      "Season Advisory": "Gorsa Waqtii"
     }
   },
   am: {
@@ -53,6 +59,7 @@ const resources = {
       "Crop Disease Detection": "የሰብል በሽታ ምርመራ",
       "Weather Forecast": "የአየር ሁኔታ ትንበያ",
       "Market Prices": "የሰብል ገበያ ዋጋ",
+      "Crop Calendar": "የግብርና ቀን መቁጠሪያ",
       "Home": "መነሻ",
       "Login": "ግባ",
       "Register": "ተመዝገብ",
@@ -66,7 +73,9 @@ const resources = {
       "Core Agricultural Tools": "ዋና ዋና የግብርና መተግበሪያዎች",
       "Scan Crop Now": "ሰብልን አሁን ይመርምሩ",
       "View Weather": "የአየር ሁኔታን ይመልከቱ",
-      "Explore Market Rates": "የገበያ ዋጋዎችን ይመልከቱ"
+      "Explore Market Rates": "የገበያ ዋጋዎችን ይመልከቱ",
+      "Price Trends": "የዋጋ ለውጥ አዝማሚያ",
+      "Season Advisory": "የወቅቱ የግብርና ምክር"
     }
   }
 };
