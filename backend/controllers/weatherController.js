@@ -1,12 +1,12 @@
 // Ethiopian city baseline weather profiles for intelligent fallback
 const ethiopianWeatherProfiles = {
   'addis ababa': { temp: 21, humidity: 55, wind: 3.2, desc: 'Partly cloudy', farmingAdvice: 'Favorable conditions for field scouting and weeding.' },
-  'adama': { temp: 28, humidity: 45, wind: 4.1, desc: 'Clear sky', farmingAdvice: 'High evaporation rate; ensure adequate irrigation for vegetables.' },
-  'jimma': { temp: 24, humidity: 68, wind: 2.5, desc: 'Light rain showers', farmingAdvice: 'Optimal moisture for coffee and maize vegetative growth.' },
-  'hawassa': { temp: 26, humidity: 60, wind: 3.0, desc: 'Scattered clouds', farmingAdvice: 'Good window for fertilizer top-dressing.' },
+  'adama': { temp: 27, humidity: 46, wind: 4.1, desc: 'Clear sky', farmingAdvice: 'High evaporation rate; ensure adequate irrigation for vegetables.' },
+  'jimma': { temp: 18, humidity: 68, wind: 2.5, desc: 'Light rain showers', farmingAdvice: 'Optimal moisture for coffee and maize vegetative growth.' },
+  'hawassa': { temp: 26, humidity: 63, wind: 3.0, desc: 'Scattered clouds', farmingAdvice: 'Good window for fertilizer top-dressing.' },
   'nekemte': { temp: 23, humidity: 72, wind: 2.8, desc: 'Overcast with mist', farmingAdvice: 'High humidity; monitor pulses and coffee for fungal rust.' },
-  'bishoftu': { temp: 25, humidity: 52, wind: 3.6, desc: 'Sunny with breeze', farmingAdvice: 'Ideal condition for teff harvesting and threshing.' },
-  'bahir dar': { temp: 27, humidity: 58, wind: 3.4, desc: 'Mostly sunny', farmingAdvice: 'Suitable weather for spraying and pest monitoring.' }
+  'bishoftu': { temp: 24, humidity: 52, wind: 3.6, desc: 'Sunny with breeze', farmingAdvice: 'Ideal condition for teff harvesting and threshing.' },
+  'bahir dar': { temp: 25, humidity: 59, wind: 3.4, desc: 'Mostly sunny', farmingAdvice: 'Suitable weather for spraying and pest monitoring.' }
 };
 
 // @desc    Get weather forecast
